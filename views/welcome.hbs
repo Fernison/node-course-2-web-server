@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="utf-8">
+    <title>Welcome page</title>
+  </head>
+  <body>
+    {{> header}}
+    <!-- Se llama al helper screamIt y se le pasa el texto para que lo ponga en mayusculas.
+    Si la funciona declarada en el Helper admitiera mñas parametros se le pasarían tambien-->
+    <p>{{screamIt welcomeMessage}}</p>
+    <!-- Para inyectar un Partial -->
+    {{> footer}}
+    <!--
+    <footer>
+      <p>{{welcomeMessage}} {{currentYear}}</p>
+    </footer>
+    -->
+  </body>
+</html>
