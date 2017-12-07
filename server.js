@@ -2,6 +2,19 @@ const express=require('express');
 const hbs=require('hbs');
 const fs=require('fs');
 
+// Obligatorio para Heroku!!!! //
+// Heroku pone el puerto de escucha en una variable de entorno.
+// La recuperamos así
+const port=process.env.PORT || 3000;
+/*
+Tambien hace falta poner "start" en "scripts" en package.json:
+
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "node server.js"
+},
+*/
+
 var app=express();
 
 // Registra los partials de los templlates.
@@ -69,6 +82,6 @@ app.get('/bad', (req, res) => {
   })
 });
 
-app.listen(3030, () => {
-  console.log('Server up and running :)');
+app.listen(port, () => {
+  console.log(`Server up and running on port ${port} :)`);
 });
