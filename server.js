@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   console.log(msg);
   fs.appendFile('server.log', msg+'\n', (err) => {
     if(err) {
-      console.log('Unable to append to file');
+      console.log('Unable to append to files');
     }
   });
   // Con next se le dice que ya se ha terminado de ejecutar ese Middleware. Si no se le dice, se bloquea //
