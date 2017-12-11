@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
   //   ]
   // })
   res.render('welcome.hbs', {
-    headerMessage: 'Message header',
+    headerMessage: 'Welcome header',
     welcomePage: 'Welcome page!!!',
     welcomeMessage: 'Welcome message'
   });
@@ -71,8 +71,17 @@ app.get('/about', (req, res) => {
   //res.send('<h1>About page</h1>');
   // Para renderizar la vista //
   res.render('about.hbs', {
-    headerMessage: 'Message header',
+    headerMessage: 'About header',
     aboutPage: 'About page!!!'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  // Para renderizar la vista //
+  res.render('projects.hbs', {
+    headerMessage: 'Project header',
+    projectPage: 'Project page!!!',
+    projectMessage: 'Project message'
   });
 });
 

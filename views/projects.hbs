@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="utf-8">
+    <title>Project page</title>
+  </head>
+  <body>
+    {{> header}}
+    <!-- Se llama al helper screamIt y se le pasa el texto para que lo ponga en mayusculas.
+    Si la funciona declarada en el Helper admitiera mñas parametros se le pasarían tambien-->
+    <p>{{screamIt projectMessage}}</p>
+    <!-- Para inyectar un Partial -->
+    {{> footer}}
+  </body>
+</html>
